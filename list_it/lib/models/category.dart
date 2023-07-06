@@ -13,22 +13,13 @@ enum Categories {
   other,
 }
 
-class Category extends StatelessWidget{
-  const Category({
-    super.key,
-    required this.name,
-    required this.color,
-  });
+class Category {
+  const Category(
+    this.title,
+    this.color,
+  );
 
-  final String name;
+  final String title;
   final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: color,
-      child: Text(name),
-    );
-  }
 
 }

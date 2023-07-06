@@ -1,25 +1,16 @@
-import 'package:flutter/material.dart';
+import 'package:list_it/models/category.dart';
 
-class GroceryItem extends StatelessWidget{
+class GroceryItem {
   const GroceryItem({
-    super.key,
     required this.id,
     required this.name,
     required this.quantity,
-    });
+    required this.category,
+  });
 
   final String id;
   final String name;
   final int quantity;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        child: Text('$quantity'),
-      ),
-      title: Text(name),
-    );
-  }
+  final Category category;
 
 }
